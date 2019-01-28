@@ -1,0 +1,31 @@
+@layout('layouts/main')
+
+@section('title')
+Freshgear | Account
+@endsection
+
+@section('content')
+<section class="content-area account-page">
+  <div class="container">
+    <div class="box-container">
+        <h1>Account</h1>
+        <hr>
+        <div class="checkout-grid">
+          <div class="forms">
+            Welcome to your account
+          </div>
+          <div class="sub-menu">
+            @include('account/sub-menu')
+          </div>
+        </div>
+    </div>
+  </div>
+  
+</section>
+@endsection
+
+@section('javascript')
+  <script>
+    console.log('Hey guys')
+  </script>
+@endsection

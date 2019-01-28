@@ -1,0 +1,68 @@
+.content-area.login_register-page{
+  padding: 120px 0;
+  .box-container{
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .login-grid{
+    display: grid;
+    &.login{
+      grid-template-columns: 1fr 2px 1fr;
+    grid-gap: 20px;
+    }
+    &.register{
+      grid-template-columns: 1fr;
+    grid-gap: 20px;
+    }
+    
+    .line{
+      width: 2px;
+      height: 100%;
+      background: #e5e5e5;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      
+      a{
+        margin-bottom: 1rem;
+      }
+      
+    }
+    .social-accounts{
+      display: flex;
+      flex-direction: column;
+      a{
+        background: #e5e5e5;
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+        margin: 0 0 1rem;
+        text-align: center;
+        color: rgb(31, 31, 31);
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+          margin: 0 15px 0 0;
+        }
+      }
+    }
+    
+  }
+  .footer{
+      margin: 1rem auto;
+      text-align: center;
+      color: #6c6c6c;
+      a{
+        text-decoration: none;
+      }
+  }
+}

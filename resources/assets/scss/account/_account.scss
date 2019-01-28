@@ -1,0 +1,77 @@
+.content-area.account-page{
+  padding: 116px 0 0;
+  h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  p{
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .checkout-grid{
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-gap: 20px;
+  }
+  .forms{
+    h3{
+      font-size: 1.7rem;
+      margin: 1.5rem 0;
+    }
+    form{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      
+    }
+    label{
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .order-list{
+      table{
+        width: 100%;
+        border: 1px solid #000;
+      }
+      thead{
+        background: black;
+        color: white;
+      }
+      td{
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: center;
+      }
+      .tag{
+        display: inline-block;
+        padding: 10px 40px;
+        border-radius: 20px;
+        &.shipped{
+          background: green;
+          color: white;
+        }
+        &.canceled{
+          background: red;
+          color: white;
+        }
+      }
+    }
+  }
+  .sub-menu{
+    background: black;
+    padding: 10px;
+    a{
+      color: white;
+      margin: 0 0 1.3rem;
+      text-transform: capitalize;
+      font-weight: 300;
+      font-size: 1.1;
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
