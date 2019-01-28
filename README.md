@@ -47,3 +47,9 @@ npm run proxy
 
 Site will be live at localhost:3000
 
+
+# Deploying
+Build static files for production 
+```bash
+npm run build
+```
