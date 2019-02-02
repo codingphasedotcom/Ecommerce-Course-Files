@@ -19,9 +19,9 @@ gulp.task('default', ['webpack', 'styles', 'browser-sync'], () => {
 		.on('change', reload);
 });
 
-gulp.task('watch-proxy', ['styles', 'browser-sync-proxy'], () => {
+gulp.task('watch-proxy', ['webpack', 'styles', 'browser-sync-proxy'], () => {
 	gulp.watch('./resources/assets/scss/**/*', ['styles']);
-	// gulp.watch('./resources/assets/js/**/*', ['webpack']);
+	gulp.watch('./resources/assets/js/**/*', ['webpack']);
 	gulp
 		.watch([
 			'./public/**/*',

@@ -45,6 +45,9 @@ header{
     font-size: 1rem;
     text-transform: uppercase;
     padding: 20px 0;
+    #cartBtn{
+      display: inline-block;
+    }
     a{
       color: #484c4f;
       padding-right: 15px;
