@@ -17,99 +17,13 @@
       <a href="/about">About</a>
       <a href="/products/new-arrivals">New Arrival</a>
       <a href="/products">All Products</a>
-      <div href="#" id="cartBtn">Cart<div>4</div></div>
+      <div href="#" id="CartBtnRoot">Cart<div>4</div></div>
     </div>
   </header>
   
     @!section('content')
 
-  <section id="cart-popup" class="">
-      <div class="cart-title">
-        <div class="title">My Cart</div>
-      </div>
-    <div class="cart-items">
-      <div class="item-container">
-        <div class="item">
-          <img src="/img/products/adidas-yeezy-boost-350-white.png">
-          <div class="delete-btn">
-            <div class="circle">X</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-container">
-        <div class="item">
-          <img src="/img/products/adidas-yeezy-boost-350-white.png">
-          <div class="delete-btn">
-            <div class="circle">X</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-container">
-        <div class="item">
-          <img src="/img/products/adidas-yeezy-boost-350-white.png">
-          <div class="delete-btn">
-            <div class="circle">X</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-container">
-        <div class="item">
-          <img src="/img/products/adidas-yeezy-boost-350-white.png">
-          <div class="delete-btn">
-            <div class="circle">X</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-container">
-        <div class="item">
-          <img src="/img/products/adidas-yeezy-boost-350-white.png">
-          <div class="delete-btn">
-            <div class="circle">X</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-container">
-        <div class="item">
-          <img src="/img/products/adidas-yeezy-boost-350-white.png">
-          <div class="delete-btn">
-            <div class="circle">X</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-container">
-        <div class="item">
-          <img src="/img/products/adidas-yeezy-boost-350-white.png">
-          <div class="delete-btn">
-            <div class="circle">X</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-container">
-        <div class="item">
-          <img src="/img/products/adidas-yeezy-boost-350-white.png">
-          <div class="delete-btn">
-            <div class="circle">X</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="product-total">
-      <div class="inside-container">
-        <div class="title">Total</div>
-        <div class="number"> x4</div>
-      </div>
-    </div>
-    <div class="price-total">
-      <div class="inside-container">
-        <div class="title">Total</div>
-        <div class="number"> $3,000</div>
-      </div>
-    </div>
-    <div class="checkout">
-      <div class="title">Checkout</div>
-      <span class="ti-shopping-cart"></span>
-    </div>
-  </section>
+  <div id="CartPopupRoot"></div>
   
 
 
@@ -117,7 +31,8 @@
   
   
   @!section('javascript')
-  <script src="/js/dist/vendors~CartBtn.js"></script>
+  <script src="/js/dist/vendors.js"></script>
   <script src="/js/dist/CartBtn.js"></script>
+  <script src="/js/dist/CartPopup.js"></script>
 </body>
 </html>

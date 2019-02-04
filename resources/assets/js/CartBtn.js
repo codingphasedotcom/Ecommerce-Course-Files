@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class Layout extends Component {
+class CartBtn extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -19,6 +19,6 @@ class Layout extends Component {
 	}
 }
 
-const cartBtn = document.getElementById('cartBtn');
+const CartBtnRoot = document.getElementById('CartBtnRoot');
 
-ReactDOM.render(<Layout />, cartBtn);
+ReactDOM.render(<CartBtn />, CartBtnRoot);

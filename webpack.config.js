@@ -16,7 +16,8 @@ compress.unused = true;
 module.exports = env => {
 	return {
 		entry: {
-			CartBtn: './resources/assets/js/CartBtn.js'
+			CartBtn: './resources/assets/js/CartBtn.js',
+			CartPopup: './resources/assets/js/CartPopup.js'
 		},
 		output: {
 			path: path.resolve(__dirname, 'public/js/dist'),
@@ -57,8 +58,13 @@ module.exports = env => {
 		],
 		optimization: {
 			splitChunks: {
-				chunks: 'all',
-				minSize: 0
+				cacheGroups: {
+					vendor: {
+						test: /[\\/]node_modules[\\/](react|react-dom|axios)[\\/]/,
+						name: 'vendors',
+						chunks: 'all'
+					}
+				}
 			},
 			minimize: true,
 			minimizer: [
