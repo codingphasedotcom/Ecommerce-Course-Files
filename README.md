@@ -1,5 +1,5 @@
 # Ecommerce Course
-
+Completed files
 ## Requirements
 Node JS installed
 We are running Node, Gulp, and MYSQL
