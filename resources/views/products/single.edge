@@ -23,41 +23,7 @@ Freshgear | Top Kicks
     </div>
     <div class="details">
       <p>The adidas Yeezy Boost 350 v2 “Static” released in December 2018, bringing a new look to Kanye West's popular silhouette. The updated Yeezy 350 features a transparent mesh panel in place of the usual side stripe. The panel is woven into the Primeknit upper on each lateral side. The Yeezy 350 "Static" introduced an intricate new Primeknit pattern in white and grey hues. The clean appearance is solidified with a translucent white rubber midsole and outsole that wrap full-length Boost cushioning. The unique design of the adidas Yeezy Boost 350 v2 “Static” provided a refreshing update that will be in-demand for years to come.</p>
-      <div class="add-to-cart">
-        <div class="detail-section">
-          <div class="detail">
-          <input type="checkbox" id="size-dropdown" class="toggle" />
-          <label class="title size-title" for="size-dropdown">Size</label>
-          <div class="content">
-          <div class="sizes">
-              <div class="option">4</div>
-                <div class="option">4.5</div>
-                <div class="option">5</div>
-                <div class="option">5.5</div>
-                <div class="option">6</div>
-                <div class="option">6.5</div>
-                <div class="option">7</div>
-                <div class="option">7.5</div>
-                <div class="option">8</div>
-                <div class="option">8.5</div>
-                <div class="option">9</div>
-                <div class="option">9.5</div>
-                <div class="option">10</div>
-                <div class="option">10.5</div>
-                <div class="option">11</div>
-                <div class="option">11.5</div>
-                <div class="option">12</div>
-                <div class="option">12.5</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="button-area">
-        <div class="button">
-          Add to cart
-        </div>
-      </div>
-    </div>
+      <div id="ProductAddToCartRoot"></div>
 
       <div class="detail-section">
         <div class="detail">
@@ -98,7 +64,5 @@ We carefully inspect every shoe with a fine toothed comb, twice, to validate its
 @endsection
 
 @section('javascript')
-  <script>
-    console.log('Hey guys')
-  </script>
+  <script src="/js/dist/ProductAddToCart.js"></script>
 @endsection

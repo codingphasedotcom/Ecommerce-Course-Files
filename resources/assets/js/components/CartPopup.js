@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
+import { closingCart } from '../actions/allActions';
 
 class CartPopup extends Component {
 	constructor() {
@@ -8,11 +9,25 @@ class CartPopup extends Component {
 			name: 'Joe'
 		};
 	}
-	clickedBtn = () => {};
-	async test() {}
+	componentDidUpdate() {
+		if (this.props.globalState.popupCartOpen == true) {
+			console.log(this.props.globalState.popupCartOpen);
+			const cartPopupElement = document.getElementById('cart-popup');
+			document.addEventListener('click', event => {
+				var clickedInside = cartPopupElement.contains(event.target);
+				if (clickedInside) {
+				} else {
+					this.props.closingCart();
+				}
+			});
+		}
+	}
 	render() {
 		return (
-			<section id="cart-popup" className="active">
+			<section
+				id="cart-popup"
+				className={this.props.globalState.popupCartOpen == true ? 'active' : ''}
+			>
 				<div className="cart-title">
 					<div className="title">My Cart</div>
 				</div>
@@ -103,6 +118,13 @@ class CartPopup extends Component {
 	}
 }
 
-const CartPopupRoot = document.getElementById('CartPopupRoot');
+const mapStateToProps = state => {
+	return state;
+};
 
-ReactDOM.render(<CartPopup />, CartPopupRoot);
+export default connect(
+	mapStateToProps,
+	{
+		closingCart
+	}
+)(CartPopup);
