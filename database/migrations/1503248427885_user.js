@@ -8,11 +8,11 @@ class UserSchema extends Schema {
 		this.raw(
 			`CREATE TABLE users(
         id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        username VARCHAR(80) NOT NULL UNIQUE,
+        username VARCHAR(80)  UNIQUE,
         email VARCHAR(254) NOT NULL UNIQUE,
         password VARCHAR(60) NOT NULL,
-        f_name VARCHAR(60) NOT NULL,
-        l_name VARCHAR(60) NOT NULL,
+        f_name VARCHAR(60) ,
+        l_name VARCHAR(60) ,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
       )

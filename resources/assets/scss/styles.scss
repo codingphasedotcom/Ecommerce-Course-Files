@@ -222,6 +222,14 @@ header{
   padding: 80px 20px;
 }
 form{
+  .error-message{
+    position: relative;
+    top: -9px;
+    color: red;
+  }
+  input.error{
+    border: 1px solid red !important;
+  }
   input[type="password"], input[type="email"], input[type="text"]{
         width: 100%;
         margin: 0 0 1rem;
@@ -238,4 +246,35 @@ form{
         color: white;
         cursor: pointer;
       }
+}
+
+#alert-box{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding: 20px;
+  width: 100%;
+  cursor: pointer;
+  &.active{
+    display: block;
+  }
+  .title{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  &.notification{
+    background: yellow;
+    color: black;
+  }
+  &.success{
+    background: green;
+    color: white;
+  }
+  &.error{
+    background: red;
+    color: white;
+  }
 }

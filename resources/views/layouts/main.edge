@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+  @include('partials/alert-box')
   <header>
     <div class="logo">
       <a href="/">freshgear</a>
@@ -33,5 +34,11 @@
   @!section('javascript')
   
   <script src="/js/dist/CartComponents.js"></script>
+  <script> 
+      var alertBox = document.getElementById("alert-box")
+      alertBox.addEventListener("click", () => {
+        document.getElementById("alert-box").classList.remove("active")
+      });
+  </script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<div id="alert-box" class=" 
+    @if(flashMessage('notification'))
+      active notification
+    @endif
+    @if(flashMessage('error'))
+      active error
+    @endif
+    @if(flashMessage('success'))
+      active success
+    @endif
+  ">
+    <div class="title">
+      @if(flashMessage('notification'))
+      Notification
+      @endif
+      @if(flashMessage('error'))
+        Error
+      @endif
+      @if(flashMessage('success'))
+        Success
+      @endif
+    </div>
+    <p>
+      @if(flashMessage('notification'))
+        {{flashMessage('notification')}}
+      @endif
+      @if(flashMessage('error'))
+        {{flashMessage('error')}}
+      @endif
+      @if(flashMessage('success'))
+        {{flashMessage('success')}}
+      @endif
+    </p>
+  </div>
