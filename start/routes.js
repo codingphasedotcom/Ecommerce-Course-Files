@@ -22,7 +22,9 @@ Route.get('/about', 'PageController.about');
 // Products
 Route.get('/products', 'ProductController.index');
 Route.get('/:brand/:subcategory/:slug', 'ProductController.show');
-Route.get('/products/new-arrivals', 'ProductController.newArrivals');
+Route.get('/products/new-arrivals', 'ProductController.newArrivals').middleware(
+	'auth'
+);
 
 // Cart
 Route.get('/cart/checkout', 'CartController.checkout');
