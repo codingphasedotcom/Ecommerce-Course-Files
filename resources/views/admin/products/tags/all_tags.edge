@@ -1,0 +1,108 @@
+@layout('layouts/admin')
+
+@section('title')
+All Tags | Freshgear
+@endsection
+
+@section('breadcrumb')
+  <h4 class="page-title pull-left">Tags</h4>
+  <ul class="breadcrumbs pull-left">
+      <li><a href="/admin/products">Products</a></li>
+      <li><a href="/admin/products/tags">Tags</a></li>
+      <li><span>All Tags</span></li>
+  </ul>
+@endsection
+
+@section('content')
+<div class="mt-5 mb-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="header-title">
+            <div class="row">
+              <div class="col-md-9"></div>
+              <div class="col-md-3 d-flex justify-content-end">
+                <a href="/admin/products/tags/create" type="button" class="btn btn-primary mb-3">Add New Tag +</a>
+              </div>
+            </div>
+          </h4>
+          <div class="single-table">
+            <div class="table-responsive">
+              <table class="table table-hover progress-table text-center">
+                <thead class="text-uppercase">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Updated At</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @each(tag in allTags)
+                    <tr>
+                      <th scope="row">{{tag.id}}</th>
+                      <td>{{tag.title}}</td>
+                      <td>{{tag.updated_at}}</td>
+                      <td>
+                        <ul class="d-flex justify-content-center">
+                          <li class="mr-3">
+                          <a href="/admin/products/tags/{{tag.id}}/edit" class="text-secondary">
+                              <i class="fa fa-edit"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/admin/products/tags/{{tag.id}}/delete" onclick="return confirm('Are you sure you want to delete?');" class="text-danger">
+                              <i class="ti-trash"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  @endeach
+                  
+                  
+                </tbody>
+              </table>
+              <div class="d-flex justify-content-center">
+                <nav aria-label="...">
+                  <ul class="pagination pg-color-border">
+                      @if(currentPage !== arrayOfPages[0])
+                        <li class="page-item">
+                          <a class="page-link" href="/admin/products/tags?page={{currentPage - 1}}&rows={{pageRows}}" tabindex="-1">Previous</a>
+                        </li>
+                      @endif
+                      
+                      @each(page in arrayOfPages)
+                      
+                      <li class="page-item 
+                      @if(page == currentPage)
+                        active
+                      @endif
+                      ">
+                          <a class="page-link" href="/admin/products/tags?page={{page}}&rows={{pageRows}}">{{page}} <span class="sr-only">(current)</span></a>
+                      </li>
+                      @endeach
+                      @if(totalPages !== currentPage)
+                        <li class="page-item">
+                          <a class="page-link" href="/admin/products/tags?page={{currentPage + 1}}&rows={{pageRows}}">Next</a>
+                        </li>
+                      @endif
+                      
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection
+
+@section('javascript')
+<script>
+  console.log('Hey guys')
+</script>
+@endsection

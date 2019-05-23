@@ -1,0 +1,80 @@
+@layout('layouts/admin')
+
+@section('title')
+Admin Dashboard | Freshgear
+@endsection
+
+
+@section('content')
+<h1>Dashboard</h1>
+<div class="table-responsive">
+                                        <table class="dbkit-table">
+                                            <tbody><tr class="heading-td">
+                                                <td class="mv-icon">Logo</td>
+                                                <td class="coin-name">Coin Name</td>
+                                                <td class="buy">Buy</td>
+                                                <td class="sell">Sells</td>
+                                                <td class="trends">Trends</td>
+                                                <td class="attachments">Attachments</td>
+                                                <td class="stats-chart">Stats</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mv-icon"><img src="/dashboard/assets//images/icon/market-value/icon1.png" alt="icon">
+                                                </td>
+                                                <td class="coin-name">Dashcoin</td>
+                                                <td class="buy">30% <img src="/dashboard/assets//images/icon/market-value/triangle-down.png" alt="icon"></td>
+                                                <td class="sell">20% <img src="/dashboard/assets//images/icon/market-value/triangle-up.png" alt="icon"></td>
+                                                <td class="trends"><img src="/dashboard/assets//images/icon/market-value/trends-up-icon.png" alt="icon"></td>
+                                                <td class="attachments">$ 56746,857</td>
+                                                <td class="stats-chart"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                                    <canvas id="mvaluechart" width="93" height="46" class="chartjs-render-monitor" style="display: block; height: 37px; width: 75px;"></canvas>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mv-icon">
+                                                    <div class="mv-icon"><img src="/dashboard/assets//images/icon/market-value/icon2.png" alt="icon"></div>
+                                                </td>
+                                                <td class="coin-name">LiteCoin</td>
+                                                <td class="buy">30% <img src="/dashboard/assets//images/icon/market-value/triangle-down.png" alt="icon"></td>
+                                                <td class="sell">20% <img src="/dashboard/assets//images/icon/market-value/triangle-up.png" alt="icon"></td>
+                                                <td class="trends"><img src="/dashboard/assets//images/icon/market-value/trends-down-icon.png" alt="icon"></td>
+                                                <td class="attachments">$ 56746,857</td>
+                                                <td class="stats-chart"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                                    <canvas id="mvaluechart2" width="93" height="46" class="chartjs-render-monitor" style="display: block; height: 37px; width: 75px;"></canvas>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mv-icon">
+                                                    <div class="mv-icon"><img src="/dashboard/assets//images/icon/market-value/icon3.png" alt="icon"></div>
+                                                </td>
+                                                <td class="coin-name">Euthorium</td>
+                                                <td class="buy">30% <img src="/dashboard/assets//images/icon/market-value/triangle-down.png" alt="icon"></td>
+                                                <td class="sell">20% <img src="/dashboard/assets//images/icon/market-value/triangle-up.png" alt="icon"></td>
+                                                <td class="trends"><img src="/dashboard/assets//images/icon/market-value/trends-up-icon.png" alt="icon"></td>
+                                                <td class="attachments">$ 56746,857</td>
+                                                <td class="stats-chart"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                                    <canvas id="mvaluechart3" width="93" height="46" class="chartjs-render-monitor" style="display: block; height: 37px; width: 75px;"></canvas>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mv-icon">
+                                                    <div class="mv-icon"><img src="/dashboard/assets//images/icon/market-value/icon4.png" alt="icon"></div>
+                                                </td>
+                                                <td class="coin-name">Bitcoindash</td>
+                                                <td class="buy">30% <img src="/dashboard/assets//images/icon/market-value/triangle-down.png" alt="icon"></td>
+                                                <td class="sell">20% <img src="/dashboard/assets//images/icon/market-value/triangle-up.png" alt="icon"></td>
+                                                <td class="trends"><img src="/dashboard/assets//images/icon/market-value/trends-up-icon.png" alt="icon"></td>
+                                                <td class="attachments">$ 56746,857</td>
+                                                <td class="stats-chart"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                                    <canvas id="mvaluechart4" width="93" height="46" class="chartjs-render-monitor" style="display: block; height: 37px; width: 75px;"></canvas>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+@endsection
+
+@section('javascript')
+  <script>
+    console.log('Hey guys')
+  </script>
+@endsection

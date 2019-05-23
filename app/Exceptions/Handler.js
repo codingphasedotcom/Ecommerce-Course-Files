@@ -25,7 +25,7 @@ class ExceptionHandler extends BaseExceptionHandler {
 			return response.redirect('/login');
 		}
 		//handled by parent
-		return super.hanlde(...arguments);
+		return super.handle(...arguments);
 		response.status(error.status).send(error.message);
 	}
 
